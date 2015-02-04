@@ -14,9 +14,12 @@
 ActiveRecord::Schema.define(version: 0) do
 
   create_table "categories", force: :cascade do |t|
-    t.string "category_name"
-    t.text   "category_description"
+    t.string  "category_name"
+    t.text    "category_description"
+    t.integer "project_id"
   end
+
+  add_index "categories", ["project_id"], name: "index_categories_on_project_id"
 
   create_table "owners", force: :cascade do |t|
     t.integer "user_id"

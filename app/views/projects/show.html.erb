@@ -1,0 +1,12 @@
+<font color="#838B8B"> <h1> Project Page </h1> </font>
+<br>
+<h3><b> Title: </b> <%= @project.project_name %></h3>
+<p> <b> Description: </b> <%= @project.description %> </p>
+
+<br>
+
+<h3> User who proposed the project</h3>
+<%= @users.each do |user| %>
+<p> <%= user.name %> <%= user.last_name %> </p>
+
+<% end %>
