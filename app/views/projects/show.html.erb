@@ -6,7 +6,13 @@
 <br>
 
 <h3> User who proposed the project</h3>
-<%= @users.each do |user| %>
-<p> <%= user.name %> <%= user.last_name %> </p>
+<p> 
+  <% @owner.each do |owner| %> 
+  <%= User.find_by(id: owner.user_id).name %>
+  <%= User.find_by(id: owner.user_id).last_name %>
+  <br>
+  <br>
+  <h3><b> Category </b></h3><br> <% @project.category %>
+</p>
 
 <% end %>
