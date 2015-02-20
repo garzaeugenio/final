@@ -6,13 +6,6 @@
 <br>
 
 <h3> User who proposed the project</h3>
-<p> 
-  <% @owner.each do |owner| %> 
-  <%= User.find_by(id: owner.user_id).name %>
-  <%= User.find_by(id: owner.user_id).last_name %>
-  <br>
-  <br>
-  <h3><b>  </b></h3><br> <%= @project.category %>
-</p>
-
-<% end %>
+<ul>
+  <%= @users.name %>
+</ul>

@@ -6,11 +6,11 @@ Category.delete_all
 
 # Create the users
 puts "Creating users..."
-garzaeugenio = User.create(email: "garzaeugenio@gmail.com", password: "1234", name: "Eugenio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL")
-garzaartemio = User.create(email: "garzaartemio@me.com", password: "1234", name: "Artemio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL")
-mila = User.create(email: "milarca@icloud.com", password: "1234", name: "Milarca", last_name: "Fernandez", gender: "female", city: "San Pedro Garza Garcia", state: "NL")
-agarza = User.create(email: "alfonsogarza@gmail.com", password: "1234", name: "Alfonso", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL")
-andresgarza = User.create(email: "andresgarza@gmail.com", password: "1234", name: "Andres", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL")
+garzaeugenio = User.create(email: "garzaeugenio@gmail.com", password: "1234", name: "Eugenio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "56")
+garzaartemio = User.create(email: "garzaartemio@me.com", password: "1234", name: "Artemio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "57")
+mila = User.create(email: "milarca@icloud.com", password: "1234", name: "Milarca", last_name: "Fernandez", gender: "female", city: "San Pedro Garza Garcia", state: "NL", project_id: "58")
+agarza = User.create(email: "alfonsogarza@gmail.com", password: "1234", name: "Alfonso", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "59")
+andresgarza = User.create(email: "andresgarza@gmail.com", password: "1234", name: "Andres", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "60")
 
 # Create the projects
 puts "Creating projects..."

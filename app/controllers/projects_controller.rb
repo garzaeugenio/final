@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by(id: params["id"])
-    @owner = Owner.where(project_id: @project.id)
+    @users = @project.users
   end
 
   def new

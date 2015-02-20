@@ -6,6 +6,7 @@ User:
   gender: string
   city: string
   state: string
+  project_id: integer
 
 Project:
   project_name: string
