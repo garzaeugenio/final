@@ -11,6 +11,8 @@ User:
 Project:
   project_name: string
   description: text
+  user_id: integer
+  category_id: integer
 
 Category:
   project_id: integer

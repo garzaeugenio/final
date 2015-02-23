@@ -6,19 +6,19 @@ Category.delete_all
 
 # Create the users
 puts "Creating users..."
-garzaeugenio = User.create(email: "garzaeugenio@gmail.com", password: "1234", name: "Eugenio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "56")
-garzaartemio = User.create(email: "garzaartemio@me.com", password: "1234", name: "Artemio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "57")
-mila = User.create(email: "milarca@icloud.com", password: "1234", name: "Milarca", last_name: "Fernandez", gender: "female", city: "San Pedro Garza Garcia", state: "NL", project_id: "58")
-agarza = User.create(email: "alfonsogarza@gmail.com", password: "1234", name: "Alfonso", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "59")
-andresgarza = User.create(email: "andresgarza@gmail.com", password: "1234", name: "Andres", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "60")
+garzaeugenio = User.create(email: "garzaeugenio@gmail.com", password: "1234", name: "Eugenio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "87")
+garzaartemio = User.create(email: "garzaartemio@me.com", password: "1234", name: "Artemio", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "88")
+mila = User.create(email: "milarca@icloud.com", password: "1234", name: "Milarca", last_name: "Fernandez", gender: "female", city: "San Pedro Garza Garcia", state: "NL", project_id: "89")
+agarza = User.create(email: "alfonsogarza@gmail.com", password: "1234", name: "Alfonso", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "90")
+andresgarza = User.create(email: "andresgarza@gmail.com", password: "1234", name: "Andres", last_name: "Garza", gender: "male", city: "Monterrey", state: "NL", project_id: "91")
 
 # Create the projects
 puts "Creating projects..."
-cables = Project.create(project_name: "No More Cables", description: "Eliminate telephone cables in the city")
-signs = Project.create(project_name: "No More Signs", description: "Eliminate large billboards in the city")
-app = Project.create(project_name: "Citywide App", description: "Create a citywide app to improve services")
-funding = Project.create(project_name: "Startup Funding", description: "Create resources to provide more startup funding")
-urbanplan = Project.create(project_name: "Improving Urban Development", description: "Create a new urban plan")
+cables = Project.create(project_name: "No More Cables", description: "Eliminate telephone cables in the city", user_id: "86", category_id: "1")
+signs = Project.create(project_name: "No More Signs", description: "Eliminate large billboards in the city", user_id: "87", category_id: "2")
+app = Project.create(project_name: "Citywide App", description: "Create a citywide app to improve services", user_id: "88", category_id: "3")
+funding = Project.create(project_name: "Startup Funding", description: "Create resources to provide more startup funding", user_id: "89", category_id: "4")
+urbanplan = Project.create(project_name: "Improving Urban Development", description: "Create a new urban plan", user_id: "90", category_id: "5")
 
 # Create the categories
 puts "Creating categories..."

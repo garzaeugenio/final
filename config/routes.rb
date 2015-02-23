@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
 resources :projects
-resource :users
+resources :users
 
 end

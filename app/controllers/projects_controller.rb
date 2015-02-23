@@ -5,8 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by(id: params["id"])
-    @users = @project.users
+  @project = Project.find_by(id: params["id"])
   end
 
   def new

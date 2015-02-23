@@ -1,0 +1,16 @@
+<h1><%= @user.name %>'s Projects</h1>
+<%= link_to "Projects", projects_path %> | <%= link_to "Users", users_path %> | <%= link_to "New Project", new_project_path %> | <%= link_to "New User", new_user_path %> 
+
+<p> ------------------------------------------------- </p>
+
+<ul>
+  <p>
+    <h4>
+  <% @projects.each do |project| %>
+  <%= link_to project.project_name, project_path(project) %> 
+  </h4>
+</p>
+</ul>
+
+
+<% end %>

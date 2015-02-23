@@ -9,32 +9,32 @@ class UsersController < ApplicationController
     @projects = @user.projects
   end
 
-  # def new
-  #   @project = Project.new
-  # end
+def new
+    @user = User.new
+  end
 
-  # def create
-  #   project_params = params.require(:project).permit(:project_name)
-  #   Project.create(project_params)
-  #   render text: params["project"]
-  # end
+  def create
+    user_params = params.require(:user).permit(:name, :last_name)
+    User.create(user_params)
+    render text: params["user"]
+  end
 
-  # def edit
-  #   @project = Project.find_by(id: params["id"])
+  def edit
+    @user = User.find_by(id: params["id"])
 
-  # end
+  end
 
-  # def update
-  #   project_params = params.require(:project).permit(:project_name)
-  #   @project = Project.find_by(id: params["id"])
-  #   @project.update(project_params)
-  #   redirect_to project_path
-  # end
+  def update
+    user_params = params.require(:user).permit(:user, :last_name)
+    @user = User.find_by(id: params["id"])
+    @user.update(user_params)
+    redirect_to user_path
+  end
 
-  # def destroy
-  #   @project = Project.find(params[:id])
-  #   @project.destroy
-  #   redirect_to projects_path
-  # end
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to users_path
+  end
 
 end

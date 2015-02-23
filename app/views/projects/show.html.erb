@@ -1,11 +1,10 @@
 <font color="#838B8B"> <h1> Project Page </h1> </font>
-<br>
+<%= link_to "Projects", projects_path %> | <%= link_to "Users", users_path %> | <%= link_to "New Project", new_project_path %> | <%= link_to "New User", new_user_path %> 
+
+<p> ------------------------------------------------- </p>
 <h3><b> Title: </b> <%= @project.project_name %></h3>
 <p> <b> Description: </b> <%= @project.description %> </p>
-
+<b> User: </b>
+<%= @project.user.name%> 
+<%= @project.user.last_name%>
 <br>
-
-<h3> User who proposed the project</h3>
-<ul>
-  <%= @users.name %>
-</ul>
