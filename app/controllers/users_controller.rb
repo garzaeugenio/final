@@ -15,9 +15,10 @@ def new
   end
 
   def create
-    user_params = params.require(:user).permit(:name, :last_name)
+    user_params = params.require(:user).permit!
     User.create(user_params)
-    render text: params["user"]
+    redirect_to users_path
+    
   end
 
   def edit

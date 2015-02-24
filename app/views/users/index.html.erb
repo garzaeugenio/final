@@ -6,7 +6,10 @@
 <% @users.each do |user| %>
   <li> 
     <p> <%= link_to user.name, user_path(user) %> <%= link_to user.last_name, user_path(user) %> 
-    <font size="1"><%= link_to "Edit", edit_user_path(user) %> <%= button_to 'Delete', user_path(user), method: :delete %>
+    <font size="1"><%= link_to "Edit", edit_user_path(user) %> <%= button_to('Delete', user_path(user), {:onclick => "return confirm('Are you sure')", method: :delete }) %>
+      
+ </font>
+
    </font>
     </p> 
   </li>

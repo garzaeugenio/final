@@ -14,9 +14,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project_params = params.require(:project).permit(:project_name)
+    project_params = params.require(:project).permit!
     Project.create(project_params)
-    render text: params["project"]
+    redirect_to projects_path
   end
 
   def edit
