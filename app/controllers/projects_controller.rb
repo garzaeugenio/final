@@ -15,8 +15,12 @@ class ProjectsController < ApplicationController
 
   def create
     project_params = params.require(:project).permit!
-    Project.create(project_params)
-    redirect_to projects_path
+    @project = Project.create(project_params)
+    if @project.valid?
+      redirect_to projects_path, notice: "New Project Added"
+    else
+      redirect_to users_path, alert: "Please fill our required fields"
+    end
   end
 
   def edit
@@ -28,7 +32,11 @@ class ProjectsController < ApplicationController
     project_params = params.require(:project).permit(:project_name)
     @project = Project.find_by(id: params["id"])
     @project.update(project_params)
-    redirect_to project_path
+    if @project.valid?
+      redirect_to project_path
+    else
+      render text: "Could not update"
+    end
   end
 
   def destroy

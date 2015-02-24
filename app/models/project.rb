@@ -4,6 +4,5 @@ class Project < ActiveRecord::Base
 
   validates :project_name, presence: true
   validates :description, presence: true
-  validates :category_name, presence: true
-  validates :name, presence: true
+
 end

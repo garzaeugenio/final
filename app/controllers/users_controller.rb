@@ -16,9 +16,12 @@ def new
 
   def create
     user_params = params.require(:user).permit!
-    User.create(user_params)
-    redirect_to users_path
-    
+    @user = User.create(user_params)
+    if @user.valid?
+      redirect_to users_path, notice: "New user added"
+    else
+      redirect_to users_path, alert: "Please fill our required fields"
+    end
   end
 
   def edit
@@ -30,7 +33,11 @@ def new
     user_params = params.require(:user).permit(:user, :last_name)
     @user = User.find_by(id: params["id"])
     @user.update(user_params)
-    redirect_to user_path
+    if @user.valid?
+      redirect_to user_path
+    else
+      render text: "Could not update"
+    end
   end
 
   def destroy
