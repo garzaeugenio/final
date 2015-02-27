@@ -20,7 +20,7 @@ def new
     if @user.valid?
       redirect_to users_path, notice: "New user added"
     else
-      redirect_to users_path, alert: "Please fill our required fields"
+      render "new"
     end
   end
 

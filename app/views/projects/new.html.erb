@@ -3,6 +3,17 @@
 
 <p> ------------------------------------------------- </p>
 
+<% if @project.errors.any? %>
+  <div class="alert alert-warning">
+    <h2>Some errors kept this project from being saved:</h2>
+    <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
 <%= form_for @project do |form| %>
   <div class="form-group">

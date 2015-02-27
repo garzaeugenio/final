@@ -32,9 +32,14 @@ ActiveRecord::Schema.define(version: 20150220182057) do
   add_index "owners", ["user_id"], name: "index_owners_on_user_id"
 
   create_table "projects", force: :cascade do |t|
-    t.string "project_name"
-    t.text   "description"
+    t.string  "project_name"
+    t.text    "description"
+    t.integer "user_id"
+    t.integer "category_id"
   end
+
+  add_index "projects", ["category_id"], name: "index_projects_on_category_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string  "email"
