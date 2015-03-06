@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
-    has_many :projects
-
+  has_many :projects
+  has_secure_password
+  
   validates :email, presence: true
   validates :password, presence: true
   validates :name, presence: true

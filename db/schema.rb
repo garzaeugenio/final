@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220182057) do
+ActiveRecord::Schema.define(version: 20150306060719) do
 
   create_table "categories", force: :cascade do |t|
+    t.integer "project_id"
     t.string  "category_name"
     t.text    "category_description"
-    t.integer "project_id"
   end
 
   add_index "categories", ["project_id"], name: "index_categories_on_project_id"
@@ -43,13 +43,13 @@ ActiveRecord::Schema.define(version: 20150220182057) do
 
   create_table "users", force: :cascade do |t|
     t.string  "email"
-    t.string  "password"
     t.string  "name"
     t.string  "last_name"
     t.string  "gender"
     t.string  "city"
     t.string  "state"
     t.integer "project_id"
+    t.string  "password_digest"
   end
 
   add_index "users", ["project_id"], name: "index_users_on_project_id"

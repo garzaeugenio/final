@@ -1,10 +1,27 @@
-<h1>All Projects</h1>
-<%= link_to "Projects", projects_path %> | <%= link_to "Users", users_path %> | <%= link_to "New Project", new_project_path %> | <%= link_to "New User", new_user_path %> 
 
-<p> ------------------------------------------------- </p>
- <p> <% @project.each do |project| %>
- <%= link_to project.project_name, project_path(project.id) %> 
-  <font size="1"><%= link_to "Edit", edit_project_path(project) %> <%= link_to('Delete', project_path(project), {:onclick => "return confirm('Are you sure')", method: :delete }) %>
- </font>
- </p>
+<html>
+<title> Nuestro Monterrey </title>
+<h1>Improve Your City</h1>
+
+
+
+<body>
+
+   <p class=".btn"> <% @project.each do |project| %>
+   <%= link_to project.project_name, project_path(project.id) %> 
+
+         
+              <% if current_user %>
+                
+    <font size="1"><%= link_to "Edit", edit_project_path(project) %> <%= link_to('Delete', project_path(project), {:onclick => "return confirm('Are you sure')", method: :delete }) %>
+    </font>
+              <% end %>
+          
+   </p>
+ </body>
+
+
+ 
 <% end %>
+
+</html>

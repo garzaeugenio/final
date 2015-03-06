@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
     else
       redirect_to root_path, alert: "Please log in."
     end
-
   end
 
   def destroy
