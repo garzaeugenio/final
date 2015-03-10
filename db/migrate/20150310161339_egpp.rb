@@ -1,4 +1,4 @@
-class Qwerty < ActiveRecord::Migration
+class Egpp < ActiveRecord::Migration
   def change
     add_column :users, :password_digest, :string
     remove_column :users, :password
